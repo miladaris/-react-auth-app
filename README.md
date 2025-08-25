@@ -1,7 +1,7 @@
 
 # React Auth App
 
-یک پروژه احراز هویت با React، Vite و Tailwind CSS مطابق با استانداردهای حرفه‌ای و خواسته‌های کارفرما.
+یک پروژه احراز هویت با React، Vite و Tailwind CSS 
 
 ## ویژگی‌ها
 - **فریم‌ورک:** React.js (Vite)
