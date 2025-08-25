@@ -1,0 +1,11 @@
+/* src\style.css */
+@import "tailwindcss";
+
+/* @tailwind base;
+@tailwind components; */
+@tailwind utilities;
+
+/* چند استایل کمکی برای تست */
+body {
+  @apply bg-gray-50;
+}
