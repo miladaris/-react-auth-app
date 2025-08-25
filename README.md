@@ -1,44 +1,61 @@
-//README.md
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# React Auth App
 
-Currently, two official plugins are available:
+یک پروژه احراز هویت با React، Vite و Tailwind CSS مطابق با استانداردهای حرفه‌ای و خواسته‌های کارفرما.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ویژگی‌ها
+- **فریم‌ورک:** React.js (Vite)
+- **استایل:** Tailwind CSS
+- **مدیریت فرم:** React Hook Form
+- **اعتبارسنجی:** Zod
+- **آیکون‌ها:** react-icons
+- **ساختار پروژه:** کامپوننت‌بندی استاندارد و پوشه‌بندی تمیز
+- **سرویس API:** متدهای login و register در فایل جداگانه
 
-## Expanding the ESLint configuration
+## صفحات
+### 1. صفحه ورود (Sign In)
+- دو روش ورود: ایمیل + رمز عبور و موبایل + رمز عبور
+- تب برای جابجایی بین Email و Mobile با انیمیشن نرم
+- فیلدهای ایمیل/موبایل و رمز عبور
+- لینک Forgot Password?
+- دکمه Sign In (در حالت loading غیرفعال)
+- لینک به Sign Up
+- نمایش خطاها زیر فیلد و به صورت toast
+- placeholder شماره موبایل با انتخاب کشور تغییر می‌کند
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### 2. صفحه ثبت‌نام (Sign Up)
+- فیلدهای نام، نام خانوادگی، ایمیل، کشور، شماره موبایل، رمز عبور
+- انتخاب کشور با پرچم و نام کشور
+- چک‌باکس‌های ریسک، قوانین و گزینه مارکتینگ
+- دکمه Create Account (در حالت loading غیرفعال)
+- لینک به Sign In
+- پیام هشدار برای کشورهای ممنوع
+- نمایش خطاها زیر فیلد و به صورت toast
+- placeholder شماره موبایل با انتخاب کشور تغییر می‌کند
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## الزامات طراحی و UX
+- ریسپانسیو کامل برای موبایل و دسکتاپ
+- طراحی تمیز و مدرن با spacing مناسب و فونت خوانا
+- نمایش خطاها به‌صورت واضح
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## نحوه اجرا
+1. نصب وابستگی‌ها:
+  ```bash
+  npm install
+  ```
+2. اجرای پروژه:
+  ```bash
+  npm run dev
+  ```
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## آماده‌سازی برای اتصال به API
+- endpointهای login و register در فایل `services/api.ts` تعریف شده‌اند و آماده اتصال به API اصلی هستند.
+
+## توسعه‌دهنده
+- [miladaris](https://github.com/miladaris)
+
+## لایسنس
+MIT
 
 You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
